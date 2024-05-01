@@ -24,4 +24,4 @@ for i in range(n):
     for j in range(4):
         sum_val += arr[i][j]
 avg = sum_val / (n*4)
-print(f"{avg}")
+print(f"{avg:.1f}")
