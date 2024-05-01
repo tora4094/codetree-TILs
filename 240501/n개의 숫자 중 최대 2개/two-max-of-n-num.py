@@ -1,5 +1,5 @@
 n = int(input())
-arr = list(map(int,input().split()))
+arr = list(map(long,input().split()))
 for i in range(0,n):
     for j in range(n - i - 1):        
         if arr[i] < arr[i+j]:
