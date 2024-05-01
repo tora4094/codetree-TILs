@@ -1,12 +1,17 @@
 n = int(input())
 arr = list(map(int,input().split()))
-result = -1
-arr.sort()
+
+cnt = {}
 for elem in arr:
-    if result == -1:
-        result = elem
-    elif result == elem:
-        result = -1
-    elif elem > result:
-        result = elem
+    if elem in cnt:
+        cnt[elem] += 1
+    else:
+        cnt[elem] = 1
+
+result = -1
+for elem in arr:
+    if cnt[elem] == 1:
+        if elem > result:
+            result = elem
+
 print(result)
