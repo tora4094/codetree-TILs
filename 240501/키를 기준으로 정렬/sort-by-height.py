@@ -11,7 +11,7 @@ for _ in range(n):
     name,height,weight = tuple(input().split())
     students.append(Student(name,int(height),int(weight)))    
 
-students.sort(key=lambda x: x.height)
+students.sort(key=lambda s: s.height)
 
 for student in students:
     print(student.name, student.height, student.weight)
