@@ -11,5 +11,7 @@ if len(arr1) == len(arr2):
         if arr1[i] != arr2[i]:
             result = "No"
             break
-            
+else:
+    result = "No"        
+    
 print(result)
