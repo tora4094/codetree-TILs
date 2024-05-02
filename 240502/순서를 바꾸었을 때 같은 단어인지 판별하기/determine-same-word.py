@@ -5,8 +5,11 @@ arr1.sort()
 arr2.sort()
 
 result = "Yes"
-for i in range (len(arr1)):
-    if arr1[i] != arr2[i]:
-        result = "No"
-        break
+
+if len(arr1) == len(arr2):
+    for i in range (len(arr1)):
+        if arr1[i] != arr2[i]:
+            result = "No"
+            break
+            
 print(result)
