@@ -12,14 +12,13 @@ def num_of_days(m, d):
     return total_days
 
 diff = num_of_days(m2,d2) - num_of_days(m1,d1)
+while diff < 0:
+    diff += 7
+
 day_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 week_index = day_of_week.index(w)
-a = diff % 7
-if a < 0:
-    a += 7
+diff -= week_index
+CNT = 0
 
-a_days = 0
-if a <= diff:
-    result = 1 + (diff - a) // 7
-
+result = 1 + diff // 7
 print(result)
