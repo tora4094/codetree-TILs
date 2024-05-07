@@ -1,23 +1,24 @@
 n = int(input())
-dx, dy = [1, 0, -1, 0], [0, -1, 0, 1]
+dx = [1,-1, 0, 0]
+dy = [0, 0, -1, 1]
 x, y = 0, 0
 
 for _ in range(n):
-    p, d = tuple(input().split())    
+    p, d = tuple(input().split())        
     if p == 'E':
-        p = 0
-    elif p == 'S':
-        p = 1
-    elif p == "W":
-        p = 2
-    elif p == "N":
-        p = 3
+        dir_num = 0
+    elif p == 'W':
+        dir_num = 1
+    elif p == "S":
+        dir_num = 2
+    else: # p == "N":
+        dir_num = 3
 
-    nx = x + (dx[p] * d)
-    ny = y + (dx[p] * d)
+    x += (dx[dir_num] * int(d))
+    y += (dy[dir_num] * int(d))
 
 
-print(nx,ny)
+print(x, y)
 
 
 # x,y = 1,5 
