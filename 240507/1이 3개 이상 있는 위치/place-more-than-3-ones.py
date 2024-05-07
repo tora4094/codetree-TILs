@@ -4,26 +4,25 @@ arr = [
     for _ in range(n)
 ]
 
-def in_range(n, x, y):
-    return 0 <= x <= n and 0 <= y <= n
+def in_range(x, y):
+    return 0 <= x < n and 0 <= y < n
 
 x, y = 0, 0
 dxs = [0, 1, 0, -1]
 dys = [1, 0, -1, 0]
 
-cnt = 0
 result = 0
-for i in range(n-1):
-    for j in range(n-1):
-        x, y = i, j
+for i in range(n):
+    for j in range(n):        
+        cnt = 0
         for dx, dy in zip(dxs, dys):
-            nx, ny = x + dx, y + dy
-            if in_range(n, nx, ny) and arr[nx][ny] == 1:
+            nx, ny = i + dx, j + dy
+            if in_range(nx, ny) and arr[nx][ny] == 1:
                 cnt += 1
         if cnt >= 3:
             #print(f"{x+1}행{y+1}열에 인접한 칸 중 숫자 1의 개수는 {cnt}개 입니다.")
             result += 1
-    cnt = 0
+    
 
 print(result)
 # x, y = 2, 1
