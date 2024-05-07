@@ -1,14 +1,23 @@
+def calculate_minutes(a, b, c):
+    day = a
+    hour = b
+    minute = c
+    result = day * 1440 + hour * 60 + minute
+    return result
+
+
 a,b,c = tuple(map(int,input().split()))
 
 START_DAY = 11
 START_HOUR = 11
 START_MINUTE = 11
 
-if a < START_DAY or b < START_HOUR or c < START_MINUTE:
+start_datetime = calculate_minutes(START_DAY,START_HOUR,START_MINUTE)
+end_datetime = calculate_minutes(a,b,c)
+
+if start_datetime > end_datetime:
     print(-1)
+
 else:
-    day_diff = a - START_DAY
-    hour_diff = b - START_HOUR
-    minute_diff = c - START_MINUTE
-    total_minutes = day_diff * 1440 + hour_diff * 60 + minute_diff
-    print(total_minutes)
+    datetime_diff = end_datetime - start_datetime
+    print(datetime_diff)
