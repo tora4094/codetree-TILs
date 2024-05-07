@@ -11,7 +11,7 @@ def count_days(m1, d1, m2, d2):
     if m1 == m2:
         days = d2 - d1
     else:
-        days += (month_days[m1] - d1 + 1)
+        days += (month_days[m1] - d1)
         for m in range(m1 + 1, m2):
             days += month_days[m]
 
