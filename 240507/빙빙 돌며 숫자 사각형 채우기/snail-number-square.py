@@ -8,7 +8,7 @@ dx = [0,1,0,-1]
 dy = [1,0,-1,0]
 
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 <= x and x < m and 0 <= y and y < m
 
 x, y = 0, 0
 dir_num = 0
@@ -23,6 +23,7 @@ for i in range(2, n * m + 1):
     answer[x][y] = i
 
 for i in range(n):
-    for j in range(m):
-        print(answer[i][j], end = ' ')
-    print()
+    print(*answer[i])
+    # for j in range(m):
+    #     print(answer[i][j], end = ' ')
+    # print()
