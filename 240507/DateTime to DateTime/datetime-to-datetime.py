@@ -1,10 +1,6 @@
-def calculate_minutes(a, b, c):
-    day = a
-    hour = b
-    minute = c
+def calculate_minutes(day, hour, minute):    
     result = day * 1440 + hour * 60 + minute
     return result
-
 
 a,b,c = tuple(map(int,input().split()))
 
