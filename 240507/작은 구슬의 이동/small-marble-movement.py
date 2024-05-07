@@ -13,7 +13,7 @@ dx = [0, 1, -1, 0]
 dy = [1, 0, 0, -1]
 
 def in_range(x,y):
-    return 1 <= x < n and 1 <= y < n
+    return 1 <= x <= n and 1 <= y <= n
 
 for _ in range(t):
     nr = r + dx[d]
