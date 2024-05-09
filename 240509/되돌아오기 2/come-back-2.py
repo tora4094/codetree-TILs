@@ -15,7 +15,7 @@ for d in A:
     if d == 'F':
         x, y = x + dxs[dir_num], y + dys[dir_num]        
     elif d == 'L':
-        dir_num = (dir_num - 1 + 4) % 4
+        dir_num = (dir_num - 1) % 4
     elif d == 'R':
         dir_num = (dir_num + 1) % 4
     cnt += 1
